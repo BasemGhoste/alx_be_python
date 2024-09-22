@@ -20,9 +20,10 @@ match priority:
 
 # تعديل التذكير إذا كانت المهمة حساسة للوقت
 if time_bound == "yes":
-    reminder += "that requires immediate attention today!"
+    reminder += " that requires immediate attention today!"
 else:
     reminder += ". Consider completing it when you have free time."
 
 # طباعة التذكير النهائي
 print(f"\nReminder: {reminder}")
+
