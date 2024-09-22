@@ -25,5 +25,5 @@ else:
     reminder += ". Consider completing it when you have free time."
 
 # طباعة التذكير النهائي
-print(f"\nReminder: {reminder}")
+print(f"Reminder: {reminder}")
 
