@@ -1,6 +1,6 @@
 # User order number
-num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the secund number: "))
+num1 = input("Enter the first number: ")
+num2 = input("Enter the secund number: ")
 
 # Requesting a calculation from the user
 operation = input("Choose the operation (+, -, *, /): ")
