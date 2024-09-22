@@ -1,6 +1,9 @@
 # User order number
-num1 = input("Enter the first number: ")
-num2 = input("Enter the secund number: ")
+num1 = input('Enter the first number: ')
+num2 = input('Enter the second number: ')
+
+# باقي العمليات
+
 
 # Requesting a calculation from the user
 operation = input("Choose the operation (+, -, *, /): ")
