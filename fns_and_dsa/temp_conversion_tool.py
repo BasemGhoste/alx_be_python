@@ -1,6 +1,6 @@
 # تعريف العوامل العالمية لتحويل الوحدات
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 
 # دالة لتحويل فهرنهايت إلى سيليزيوس
 def convert_to_celsius(fahrenheit):
@@ -35,4 +35,3 @@ def main():
 
 if __name__ == "__main__":
     main()
- 
