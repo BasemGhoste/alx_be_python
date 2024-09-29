@@ -3,11 +3,11 @@ FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 
 def convert_to_celsius(fahrenheit):
-    """تحويل درجة الحرارة من فهرنهايت إلى سيلسيوس."""
+    """Convert temperature from Celsius to Fahrenheit."""
     return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 def convert_to_fahrenheit(celsius):
-    """تحويل درجة الحرارة من سيلسيوس إلى فهرنهايت."""
+    """Convert temperature from Celsius to Fahrenheit."""
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 def main():
