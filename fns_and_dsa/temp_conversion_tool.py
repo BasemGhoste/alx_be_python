@@ -1,38 +1,35 @@
-# تعريف المتغيرات العامة لعوامل التحويل
+# تعريف العوامل العالمية لتحويل الوحدات
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
-FAHRENHEIT_OFFSET = 32  # فرق التحويل للدرجات فهرنهايت
 
-# دالة التحويل من فهرنهايت إلى مئوية
+# دالة لتحويل فهرنهايت إلى سيليزيوس
 def convert_to_celsius(fahrenheit):
-    celsius = (fahrenheit - FAHRENHEIT_OFFSET) * FAHRENHEIT_TO_CELSIUS_FACTOR
-    return celsius
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
-# دالة التحويل من مئوية إلى فهرنهايت
+# دالة لتحويل سيليزيوس إلى فهرنهايت
 def convert_to_fahrenheit(celsius):
-    fahrenheit = (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + FAHRENHEIT_OFFSET
-    return fahrenheit
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
-# الدالة الرئيسية للتفاعل مع المستخدم
+# التفاعل مع المستخدم
 def main():
     try:
         # طلب درجة الحرارة من المستخدم
         temp = float(input("Enter the temperature to convert: "))
-
-        # تحديد وحدة القياس (مئوية أو فهرنهايت)
+        # طلب الوحدة
         unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
 
-        # تحويل درجة الحرارة بناءً على الوحدة
+        # التحقق من الوحدة وإجراء التحويل المناسب
         if unit == 'F':
-            converted_temp = convert_to_celsius(temp)
-            print(f"{temp}°F is {converted_temp}°C")
+            # تحويل من فهرنهايت إلى سيليزيوس
+            result = convert_to_celsius(temp)
+            print(f"{temp}°F is {result}°C")
         elif unit == 'C':
-            converted_temp = convert_to_fahrenheit(temp)
-            print(f"{temp}°C is {converted_temp}°F")
+            # تحويل من سيليزيوس إلى فهرنهايت
+            result = convert_to_fahrenheit(temp)
+            print(f"{temp}°C is {result}°F")
         else:
-            print("Invalid unit. Please enter C for Celsius or F for Fahrenheit.")
+            print("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
     
-    # التعامل مع الأخطاء في حالة إدخال درجة حرارة غير صحيحة
     except ValueError:
         print("Invalid temperature. Please enter a numeric value.")
 
