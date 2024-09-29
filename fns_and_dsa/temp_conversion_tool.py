@@ -1,32 +1,26 @@
-# تعريف العوامل العالمية لتحويل الوحدات
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+# تعريف المتغيرات العالمية
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 
-# دالة لتحويل فهرنهايت إلى سيليزيوس
 def convert_to_celsius(fahrenheit):
+    """تحويل درجة الحرارة من فهرنهايت إلى سيلسيوس."""
     return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
-# دالة لتحويل سيليزيوس إلى فهرنهايت
 def convert_to_fahrenheit(celsius):
+    """تحويل درجة الحرارة من سيلسيوس إلى فهرنهايت."""
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
-# التفاعل مع المستخدم
 def main():
     try:
-        # طلب درجة الحرارة من المستخدم
-        temp = float(input("Enter the temperature to convert: "))
-        # طلب الوحدة
+        temperature = float(input("Enter the temperature to convert: "))
         unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
 
-        # التحقق من الوحدة وإجراء التحويل المناسب
-        if unit == 'F':
-            # تحويل من فهرنهايت إلى سيليزيوس
-            result = convert_to_celsius(temp)
-            print(f"{temp}°F is {result}°C")
-        elif unit == 'C':
-            # تحويل من سيليزيوس إلى فهرنهايت
-            result = convert_to_fahrenheit(temp)
-            print(f"{temp}°C is {result}°F")
+        if unit == 'C':
+            converted_temp = convert_to_fahrenheit(temperature)
+            print(f"{temperature}°C is {converted_temp}°F")
+        elif unit == 'F':
+            converted_temp = convert_to_celsius(temperature)
+            print(f"{temperature}°F is {converted_temp}°C")
         else:
             print("Invalid unit. Please enter 'C' for Celsius or 'F' for Fahrenheit.")
     
@@ -35,4 +29,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
